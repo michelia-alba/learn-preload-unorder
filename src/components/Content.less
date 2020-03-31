@@ -1,0 +1,30 @@
+.content {
+  padding: 10px 40px;
+  @media screen and ( min-width : 1500px) {
+    ul {
+      column-count: 6;
+    }
+  }
+  @media screen and ( max-width : 1500px) {
+    ul {
+      column-count: 5;
+    }
+  }
+  @media screen and ( max-width : 1024px) {
+    ul {
+      column-count: 2;
+    }
+  }
+  @media screen and ( max-width : 400px) {
+    ul {
+      column-count: 1;
+    }
+  }
+  li {
+    width: 250px;
+    // height: 250px;
+    margin: 20px;
+    border: 1px solid #ccc;
+    background: #0f0;
+  }
+}

@@ -4,13 +4,8 @@
   height: 100vh;
   background: #000;
   overflow: hidden;
-  &__left {
-    width: 20%;
-    height: 100vh;
-    border-right: 1px solid #ccc;
-  }
   &__right {
-    width: 80%;
+    width: 100%;
     overflow-y: auto;
     &-tabs {
       width: 100%;
@@ -37,40 +32,10 @@
     &-main-content {
       margin-top: 48px;
     }
-    .content {
-      padding: 10px 40px;
-      @media screen and ( min-width : 1500px) {
-        ul {
-          column-count: 4;
-        }
-      }
-      @media screen and ( max-width : 1500px) {
-        ul {
-          column-count: 3;
-        }
-      }
-      @media screen and ( max-width : 1024px) {
-        ul {
-          column-count: 2;
-        }
-      }
-      @media screen and ( max-width : 400px) {
-        ul {
-          column-count: 1;
-        }
-      }
-      li {
-        width: 250px;
-        // height: 250px;
-        margin: 20px;
-        border: 1px solid #ccc;
-        background: #0f0;
-      }
-    }
+    
     img {
       display: block;
       width: 100%;
-      // height: 100%;
       // object-fit: scale-down;
     }
   }

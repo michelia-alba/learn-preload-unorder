@@ -1,4 +1,5 @@
 import { images } from '../constant'
+import './Content.less'
 export default {
   props: {
     tab: {
