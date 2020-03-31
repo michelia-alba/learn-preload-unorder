@@ -34,14 +34,30 @@
     &-tabs-item:not(:last-child) {
       border-right: 1px solid #999;
     }
+    &-main-content {
+      margin-top: 48px;
+    }
     .content {
       padding: 10px 40px;
-      ul {
-        // display: flex;
-        // flex-wrap: wrap;
-        // align-items: center;
-        column-count: 4;
-        // column-gap: 4px;
+      @media screen and ( min-width : 1500px) {
+        ul {
+          column-count: 4;
+        }
+      }
+      @media screen and ( max-width : 1500px) {
+        ul {
+          column-count: 3;
+        }
+      }
+      @media screen and ( max-width : 1024px) {
+        ul {
+          column-count: 2;
+        }
+      }
+      @media screen and ( max-width : 400px) {
+        ul {
+          column-count: 1;
+        }
       }
       li {
         width: 250px;

@@ -6,7 +6,6 @@ import './PreviewImage.less'
 export default {
   data() {
     return {
-      tab: {},
       activeName: 'Style'
     }
   },
@@ -30,10 +29,13 @@ export default {
               <li 
                 onclick={this.handleTabChange(item)}
                 class="preview-image__right-tabs-item" 
-                style={this.activeName ===item.value ? {background: '#a9a1a1'} : {background: '#ccc'}}>{item.name}</li>
+                style={this.activeName === item.value ? {background: '#a9a1a1'} : {background: '#ccc'}}>{item.name}</li>
             ))}
           </ul>
-          <Content tab={this.tab}/>
+          <div class="preview-image__right-main-content">
+            {this.activeName === 'Style' && (<Content tab={this.activeName}/>) }
+          </div>
+          
         </div>
       </div>
     )

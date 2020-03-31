@@ -2,8 +2,7 @@ import { images } from '../constant'
 export default {
   props: {
     tab: {
-      type: Object,
-      default: () => {}
+      type: String,
     }
   },
   render() {
