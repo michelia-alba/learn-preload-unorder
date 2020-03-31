@@ -18,7 +18,7 @@ export const IMGTYPE = {
   JSS: {
     key: 'JSS',
     value: 'JSS',
-    name: '脚步JSS'
+    name: '脚本JSS'
   }
 }
 
