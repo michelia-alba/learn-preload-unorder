@@ -12,6 +12,28 @@
   &__right {
     width: 80%;
     overflow-y: auto;
+    &-tabs {
+      width: 100%;
+      height: 48px;
+      line-height: 48px;
+      display: flex;
+      padding-left: 24px;
+      position: fixed;
+      z-index: 1;
+      background: #fff;
+      color: #000;
+    }
+    &-tabs-item {
+      padding: 0 24px;
+      cursor: pointer;
+      &:hover {
+        background: #a9a1a1;
+      }
+      background: #ccc;
+    }
+    &-tabs-item:not(:last-child) {
+      border-right: 1px solid #999;
+    }
     .content {
       padding: 10px 40px;
       ul {
