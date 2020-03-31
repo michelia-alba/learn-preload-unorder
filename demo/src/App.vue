@@ -20,9 +20,12 @@ html {
   height: 100%;
   background: #000;
 }
-html,body {
+html,body,ul,li {
   margin: 0;
   padding: 0;
+}
+li {
+    list-style: none;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
