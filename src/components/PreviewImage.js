@@ -18,23 +18,21 @@ export default {
         this.activeName = item
       }
     },
-  },
-  created() {
-    window.onload = () => {
+    handleImageLayout() {
       const innerWidth = window.innerWidth
       const columns = parseInt(innerWidth / (this.defaultWidth + this.gap))
-      const liEles = document.getElementsByClassName('preview-item')
       const ulEle = document.getElementById('preveiw-box')
-      const parentTop = ulEle.offsetTop
+      const liEles = document.getElementsByClassName('preview-item')
+      const parentTop = ulEle.offsetTop + 24
       const heightArray = []
 
       map(liEles, (item, index) => {
         if (index < columns) {
           item.style.left = `${(this.defaultWidth + 20) * index}px`
-          item.style.top = `${parentTop + 24}px`
-          heightArray.push(item.offsetHeight + parentTop + 24)
+          item.style.top = `${parentTop}px`
+          console.log([item])
+          heightArray.push(item.offsetHeight + parentTop)
         } else {
-          debugger
           const minHeight = min(heightArray)
           const minHeightIndex = indexOf(heightArray, minHeight)
           item.style.top = `${minHeight + this.gap}px`
@@ -43,6 +41,14 @@ export default {
         }
       })
       return heightArray
+    },
+  },
+  created() {
+    window.onload = () => {
+      this.handleImageLayout()
+    }
+    window.onresize = () => {
+      this.handleImageLayout()
     }
   },
   render() {
