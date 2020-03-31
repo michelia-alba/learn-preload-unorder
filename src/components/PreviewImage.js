@@ -1,17 +1,18 @@
 
 import Content from './Content'
-import {image_layouts} from '../constant'
+import {IMGTYPE} from '../constant'
+import { map } from 'lodash'
 import './PreviewImage.less'
 export default {
   data() {
     return {
-      activeName: 'Style'
+      activeName: IMGTYPE.Columns.key
     }
   },
   methods: {
     handleTabChange(item) {
       return () => {
-        this.activeName = item.value
+        this.activeName = item
       }
     }
   },
@@ -20,15 +21,16 @@ export default {
       <div class="preview-image">
         <div class="preview-image__right">
           <ul class="preview-image__right-tabs">
-            {image_layouts.map(item => (
+            {map(IMGTYPE,(value, key) => (
               <li 
-                onclick={this.handleTabChange(item)}
+                onclick={this.handleTabChange(key)}
                 class="preview-image__right-tabs-item" 
-                style={this.activeName === item.value ? {background: '#a9a1a1'} : {background: '#ccc'}}>{item.name}</li>
+                style={this.activeName === value.value ? {background: '#a9a1a1'} : {background: '#ccc'}}>{value.name}</li>
             ))}
           </ul>
+
           <div class="preview-image__right-main-content">
-            {this.activeName === 'Style' && (<Content tab={this.activeName}/>) }
+            <Content tab={this.activeName}/>
           </div>
           
         </div>

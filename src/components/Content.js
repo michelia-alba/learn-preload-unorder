@@ -1,5 +1,8 @@
 import { images } from '../constant'
 import './Content.less'
+const styleTypes= {
+  Columns: 'content'
+}
 export default {
   props: {
     tab: {
@@ -8,7 +11,7 @@ export default {
   },
   render() {
     return (
-      <div class="content">
+      <div class={styleTypes[this.tab]}>
         <ul>
           {images.map(item => (
             <li>

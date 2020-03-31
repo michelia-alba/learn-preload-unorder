@@ -1,3 +1,27 @@
+export const category_type = [
+  { name: '图片的布局方式', value: 'Unorder' },
+  { name: '有序加载', value: 'Order' },
+  { name: '渐进加载', value: 'Progressvie' },
+  { name: '预览图片', value: 'Preview' },
+]
+export const IMGTYPE = {
+  Columns: {
+    key: 'Columns',
+    value: 'Columns',
+    name: '样式Columns'
+  },
+  Floats: {
+    key: 'Floats',
+    value: 'Floats',
+    name: '样式Floats'
+  },
+  JSS: {
+    key: 'JSS',
+    value: 'JSS',
+    name: '脚步JSS'
+  }
+}
+
 export const images = [
   'https://images.pexels.com/photos/3994840/pexels-photo-3994840.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
   'https://images.pexels.com/photos/3673557/pexels-photo-3673557.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
@@ -83,15 +107,4 @@ export const images = [
   'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585056732805&di=84ecc1fdbe55509b1de69402093dfd8b&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201605%2F13%2F20160513134633_Lr2mG.jpeg',
   'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1585056732803&di=c3d3a899028eb6d8c1a70b84c5695091&imgtype=0&src=http%3A%2F%2Fpic.rmb.bdstatic.com%2Fd02ee4def3913080d4c6f054a858dfdd.png',
   
-]
-export const category_type = [
-  { name: '图片的布局方式', value: 'Unorder' },
-  { name: '有序加载', value: 'Order' },
-  { name: '渐进加载', value: 'Progressvie' },
-  { name: '预览图片', value: 'Preview' },
-]
-
-export const image_layouts = [
-  {name: '样式', value: 'Style'},
-  {name: '脚本', value: 'JS'}
 ]
