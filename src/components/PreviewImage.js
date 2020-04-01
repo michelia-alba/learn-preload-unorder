@@ -30,7 +30,6 @@ export default {
         if (index < columns) {
           item.style.left = `${(this.defaultWidth + 20) * index}px`
           item.style.top = `${parentTop}px`
-          console.log([item])
           heightArray.push(item.offsetHeight + parentTop)
         } else {
           const minHeight = min(heightArray)
